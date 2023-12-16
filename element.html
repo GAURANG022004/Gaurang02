@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Validate the Password</title>
+</head>
+<script> 
+  	function validateForm( ) {
+    	//collect form data in javaScript variables 
+  		var pw1 = 
+      				document.getElementById("pswd1").value;
+ 		 var pw2 = 
+      				document.getElementById("pswd2").value;
+  		var name1 = 
+      				document.getElementById("fname").value;
+  		var name2 = 
+      				document.getElementById("Iname").value;
+ if (name1 == "") {
+            document.getElementById("blankMsg").innerHTML
+                     =
+                       "**Fill the first name ";
+                       return false;
+}
+//character data validation
+	if (!isNaN(name1))  {
+     			document.getElementById("blackMsg").innerHTML
+			=
+	
+			"**Only characters are allowed";
+                        return false;
+}
+//character data validation
+if (!isNaN(name2))  {
+     			document.getElementById("charMsg").innerHTML
+			=
+	
+			"**Only characters are allowed";
+                        return false;
+}
+//check empty password field 
+if (pw1 == "")  {
+     			document.getElementById("message1").innerHTML
+			=
+	
+			"**Fill the password please";
+                        return false;
+}
+if (pw2 == "")  {
+     			document.getElementById("message2").innerHTML
+			=
+	
+			"**Enter the password please!";
+                        return false;
+}
+//minimum password length validation
+if(pw1.length < 8) {
+                     document.getElementById("message1").innerHTML
+			=
+	
+			"**Password length must be atleast 8 characters!";
+                        return false;
+}
+//maximum length of password validation
+if(pw1.length >15) {
+                     document.getElementById("message1").innerHTML
+			=
+	
+			"**Please enter maximum 15 characters!";
+                        return false;
+}
+if(pw1 ! =pw2) {
+                     document.getElementById("message2").innerHTML
+			=
+	
+			"**Password are not same";
+                        return false;
+} else {
+               alert("Your password created succesfully");
+
+		document.write("JavaScript form has been submitted succesfully"):
+}
+}
+</script>
+	<body>
+		<h1 style="color:skyblue"> Create Password</h1>
+		<h3> Verify valid password Example</h3>
+		<form on submit ="return validationform()">
+				< td> Full name*</td>
+						<input type="text" id="fname" value=" "/>
+						<span id ="blankMsg"  style="color : red "> </span><br></br>
+				<td> Last name</td>
+						<input type="text" id="lname" value=" "/>
+						<span id ="charMsg"  style="color : red "> </span></br></br>
+				<td> Create password</td>
+						<input type="password" id="pswd1" value=" "/>
+						<span id ="Message1"  style="color : red "> </span></br></br>
+
+                                 <!? -- Enter confirm password -->
+                                 <td>   confirm password*</td>
+						<input type="password" id="pswd2" value=" "/>
+						<span id ="Message2"  style="color : red "> </span></br></br>
+				<! --Clicked to verify valid password -->
+						<input type="submit"  value=" submit "/>
+			        <! --Clicked to reset fields -->
+						<button type="reset"  value=" reset"> Reset <?button>
+</form>
+</body>
+</html>
+					
+
+                                
+
+
+
+
+
+
+
+
+
+		
